@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <style>
+      /* .card {
+        height: 200px;
+        width: 400px;
+        box-shadow: 10px 10px 10px gray;
+        border-radius: 20px;
+        padding: 30px;
+      }
+      .card-header{
+        height: 80px;
+        width: 100%;
+        background-color: rgb(215, 239, 221);
+        border-radius: 8px;
+      }
+      *{
+        box-sizing: border-box;
+      } */
+
+      :root {
+        --card-height: calc(100% - 100px);
+        --card-width: calc(100% - 100px);
+        --card-header-height: 80px;
+        --card-header-width: 100%;
+        --card-header-bg-color: rgb(215, 239, 221);
+        --card-header-border-radius: 8px;
+        --card-shadow: 10px 10px 10px gray;
+        --card-border-radius: 20px;
+        --card-padding: 30px;
+        --universal-box-sizing: border-box;
+      }
+      .card {
+        height: var(--card-height);
+        width: var(--card-width);
+        box-shadow: var(--card-shadow);
+        border-radius: var(--card-border-radius);
+        padding: var(--card-padding);
+      }
+      .card-header {
+        height: var(--card-header-height);
+        width: var(--card-header-width);
+        background-color: var(--card-header-bg-color);
+        border-radius: var(--card-header-border-radius);
+      }
+      * {
+        box-sizing: var(--universal-box-sizing);
+      }
+      .container {
+        container-type: inline-size;
+        /* container-name: card-container; */
+        width: 100%;
+      }
+      @container (min-width: 768px) {
+        .card {
+          width: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <div><i class="fa fa-paint-brush"></i></div>
+          <span>A Tidy Card</span>
+        </div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>
